@@ -1,0 +1,38 @@
+<!--
+/**
+ * file: decimal_to_binary.html
+ * type: HyperTextMarkupLanguage
+ * author: karbytes
+ * date: 02_FEBRUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>DECIMAL_TO_BINARY</title>
+ 	<link rel="stylesheet" href="basic_stylesheet.css">
+ 	<script src="decimal_to_binary.js"></script>
+ </head>
+ <body onload="load_web_page()">
+ 	<div class="bordered_container">
+ 		<h1>DECIMAL_TO_BINARY</h1>
+ 		<p>Convert a base-ten nonnegative integer to its uniquely corresponding 8-digit sequence of binary digits.</p>
+ 	</div>
+ 	<div class="bordered_container">
+ 		<p>1) Enter a nonnegative decimal number into the text box below.</p>
+ 		<p>
+ 			<input type="text" id="decimal_input_field">
+ 			<span class="data" id="decimal_input_display"></span>
+ 		</p>
+ 		<p>2) Click the button below to convert the decimal input to its corresponding binary output.</p>
+ 		<p>
+ 			<input type="button" id="decimal_to_binary_button" value="decimal_to_binary()" onclick="decimal_to_binary()">
+ 			<span class="data" id="hidden_button_explanation_display"></span>
+ 		</p>
+ 	</div>
+ 	<div class="bordered_container" id="output"><p>???</p></div>
+ 	<div class="bordered_container" id="console"><p>???</p></div>
+ </body>
+ </html>
