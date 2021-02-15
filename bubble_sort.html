@@ -1,0 +1,43 @@
+<!--
+/**
+ * file: bubble_sort.html
+ * type: HyperTextMarkupLanguage
+ * author: karbytes
+ * date: 27_JANUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>BUBBLE_SORT</title>
+ 	<link rel="stylesheet" href="basic_stylesheet.css">
+ 	<script src="bubble_sort.js"></script>
+ </head>
+ <body onload="load_web_page()">
+ 	<div class="bordered_container">
+ 		<h1>BUBBLE_SORT</h1>
+ 		<p>Sort an array of random nonnegative integers in ascending order.</p>
+ 	</div>
+ 	<div class="bordered_container">
+ 		<p>1. Enter a maximum value for each random nonnegative integer:</p>
+ 		<p>
+ 			<input type="text" id="maximum_output_value_field">&nbsp;
+ 			<span class="data" id="maximum_output_value_field_status_message"></span>
+ 		</p>
+ 		<p>2. Enter a natural number array length (i.e. number of array elements):</p>
+ 		<p>
+ 			<input type="text" id="number_of_array_elements_field">&nbsp;
+ 			<span class="data" id="number_of_array_elements_field_status_message"></span>
+ 		</p>
+ 		<p>3. Click the SORT button to perform the bubble sort algorithm.</p>
+ 		<p>
+ 			<input type="button" id="sort_button" value="SORT" onclick="sort()">&nbsp;
+ 			<span class="data" id="sort_button_status_message"></span>
+ 		</p>
+ 	</div>
+ 	<div class="bordered_container" id="output"><p>???</p></div>
+ 	<div class="bordered_container" id="console"><p>???</p></div>
+ </body>
+ </html>
