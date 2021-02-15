@@ -1,0 +1,72 @@
+<!--
+/**
+ * file: count_down_timer.html
+ * type: HyperTextMarkupLanguage
+ * author: karbytes
+ * date: 08_JANUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>COUNT_DOWN_TIMER</title>
+ 	<link rel="stylesheet" href="karbytes_stylesheet.css">
+ 	<script src="count_down_timer.js"></script>
+ 	<style>
+ 		/** 
+ 		 * Use inline CSS code to give elements whose class is 
+ 		 * "section_panel" a cyan rounded border 1 pixel thick.
+ 		 */
+ 		.section_panel {
+ 			background: #000000;
+ 			border-color: #00ffff;
+ 			border-width: 1px;
+ 			border-style: solid;
+ 			border-radius: 5px;
+ 			padding: 10px;
+ 			margin: 10px;
+ 		}
+ 	</style>
+ </head>
+ <body onload="initialize_application()">
+ 	<!-- Display instructions for how to use the application. -->
+ 	<div class="section_panel">
+ 		<h1>COUNT_DOWN_TIMER</h1>
+ 		<p>Time is what makes the observation of change possible.</p>
+ 		<p>Instantiate a time continuum which is N seconds in length.</p>
+ 	</div>
+ 	<!-- Display an expandable select menu of timer interval lengths. -->
+ 	<div class="section_panel">
+ 		<p>STEP_0: Select a natural number of seconds, N, from the menu.</p>
+ 		<p>N =
+ 			<select id="nonnegative_integer_interval_selector">
+ 				<option value="30" selected>30 seconds</option>
+ 				<option value="60">60 seconds</option>
+ 				<option value="120">120 seconds</option>
+ 				<option value="240">240 seconds</option>
+ 				<option value="480">480 seconds</option>
+ 				<option value="960">960 seconds</option>
+ 			</select>
+ 		</p>
+ 		<p>(Click the menu to view hidden options).</p>
+ 	</div>
+ 	<!-- Display a button which starts the timer session of N seconds. -->
+ 	<div class="section_panel">
+ 		<p>STEP_1: Click the button to start counting down from N to 0 seconds.</p>
+ 		<p>
+ 			<input id="timer_start_button" type="button" value="start()" onclick="start()">
+ 		</p>
+ 	</div>
+ 	<!-- Display the integer number of seconds remaining for the "in progress" timer session. -->
+ 	<div id="output" class="section_panel">
+ 		<span id="nonnegative_integer_display">???</span> seconds remaining.
+ 	</div>
+ 	<!-- Display time-stamped messages which record specific occurrences of program events. -->
+ 	<div id="console" class="section_panel">
+ 		<p>???</p>
+ 	</div>
+ </body>
+ </html>
+ <!-- End of File -->
