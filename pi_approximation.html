@@ -1,0 +1,34 @@
+<!--
+/**
+ * file: pi_approximation.html
+ * type: HyperTextMarkupLanguage
+ * author: karbytes
+ * date: 09_JANUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>PI_APPROXIMATION</title>
+ 	<link rel="stylesheet" href="karbytes_stylesheet.css">
+ 	<script src="pi_approximation.js"></script>
+ </head>
+ <body onload="load_page()">
+ 	<h1>PI_APPROXIMATION</h1>
+ 	<p>PI is a constant which represents the ratio of a circle's circumference to its diameter.</p>
+ 	<p>Use the following formula to approximate the value of PI:</p>
+ 	<p>pi_approximation = (4 * (magenta_dot_count / (magenta_dot_count + green_dot_count))).</p>
+ 	<div id="output">
+ 		<p>seconds_remaining: <span id="seconds_remaining_display">???</span>.</p>
+ 		<p>magenta_dot_count: <span id="magenta_dot_count_display">???</span>.</p>
+ 		<p>green_dot_count: <span id="green_dot_count_display">???</span>.</p>
+ 		<p>pi_approximation: <span id="pi_approximation_display">???</span>.</p>
+ 	</div>
+ 	<canvas id="square_canvas" width="200" height="200"></canvas>
+ 	<p>Click the button to begin the 30-minute Monte Carlo Simulation.</p>
+ 	<p><input type="button" id="start_button" value="start()" onclick="start()"></p>
+ 	<p id="console">???</p>
+ </body>
+ </html>
