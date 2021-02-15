@@ -1,0 +1,254 @@
+<hr>
+<p>INFINITE_LOOP_SOUND</p>
+<hr>
+<p>The single web page application featured in this tutorial plays a audio file an indefinite number of times with a gap of approximately one second between each audio file loop.</p>
+<hr>
+<p><strong>Application Component Files</strong></p>
+<p><a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/infinite_loop_sound.html" target="_blank">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/infinite_loop_sound.html</a></p>
+<p><a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/infinite_loop_sound.js" target="_blank">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/infinite_loop_sound.js</a></p>
+<p><a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/karbytes_stylesheet.css" target="_blank">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/karbytes_stylesheet.css</a></p>
+<p><a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/frog_choir_noise_sample.mp3" target="_blank">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/frog_choir_noise_sample.mp3</a></p>
+<p><a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/sea_and_sand_noise_sample.mp3" target="_blank">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/sea_and_sand_noise_sample.mp3</a></p>
+<hr>
+<p><strong>Application Inputs</strong></p>
+<p>This media player application utilizes a SELECT menu (which displays a scrollable list of OPTION elements such that exactly one out of some natural number of audio file names are selected (either automatically or manually).</p>
+<p>The start_sound_bath() button element is removed from the web page interface after it is clicked in order to keep the output values accurate and limited to exactly one timed session.</p>
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="4368" data-permalink="https://karlinaobject.wordpress.com/infinite_loop_sound_input_elements/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_input_elements.png" data-orig-size="550,286" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="infinite_loop_sound_input_elements" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_input_elements.png?w=300" data-large-file="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_input_elements.png?w=550" src="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_input_elements.png?w=550" alt="" class="wp-image-4368" srcset="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_input_elements.png 550w, https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_input_elements.png?w=150 150w, https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_input_elements.png?w=300 300w" sizes="(max-width: 550px) 100vw, 550px" /></figure>
+
+
+<hr>
+<p><strong>Application Outputs</strong></p>
+<p>The total number of seconds elapsed since clicking the button is displayed on the web page interface (and updated every time a particular anonymous function is called (once per every 1000 milliseconds)).</p>
+<p>The total number of times the selected sound file is played is also displayed on the web page interface (and updated every time the audio file finishes playing an immutable sequence of distinguishable auditory phenomena for some constant length of time).</p>
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="4370" data-permalink="https://karlinaobject.wordpress.com/infinite_loop_sound_outputs/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_outputs.png" data-orig-size="827,631" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="infinite_loop_sound_outputs" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_outputs.png?w=300" data-large-file="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_outputs.png?w=827" src="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_outputs.png?w=827" alt="" class="wp-image-4370" srcset="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_outputs.png 827w, https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_outputs.png?w=150 150w, https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_outputs.png?w=300 300w, https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_outputs.png?w=768 768w" sizes="(max-width: 827px) 100vw, 827px" /></figure>
+
+
+<hr>
+<p><strong>JavaScript (JS)</strong></p>
+<p>The JavaScript code defines a set of functions which each perform a specific task such as data manipulation and interface updates. The JavaScript code is what makes the web page interface dynamic and interactive rather than static and “read only”.</p>
+<pre>/**
+ * file: infinite_loop_sound.js
+ * type: JavaScript
+ * author: karbytes
+ * date: 18_JANUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+
+/**
+ * Get the Number of milliseconds which have elapsed since the Unix Epoch.
+ * The Unix Epoch is 01_JANUARY_1970 at midnight (Coordinated Universal Time (UTC)).
+ * @return {String} message displaying the time at which this function was called.
+ */
+function generate_time_stamp() {
+ 	const milliseconds_elapsed_since_unix_epoch = Date.now();
+ 	return  milliseconds_elapsed_since_unix_epoch + " milliseconds since midnight on 01_JANUARY_1970.";
+}
+
+/**
+ * Generate an HTML formatted string which represents the list of options displayed by a select menu.
+ * By clicking on the select element, an scrollable list of options will appear.
+ * @return {String} a natural number of options for a select menu.
+ */
+function get_menu_options() {
+	let HTML_string = ('&lt;' + 'option value="frog_choir_noise_sample.mp3" selected' + '&gt;');
+	HTML_string += ('frog_choir_noise_sample.mp3' + '&lt;' + '/' + 'option' + '&gt;');
+	HTML_string += ('&lt;' + 'option value="sea_and_sand_noise_sample.mp3" ' + '&gt;');
+	HTML_string += ('sea_and_sand_noise_sample.mp3' + '&lt;' + '/' + 'option' + '&gt;');
+	return HTML_string;
+}
+
+/**
+ * Return the value of the selected menu OPTION of a SELECT menu element.
+ * @param {String} select_menu_identifier is the id of a select HTML element.
+ * @return {String} the value of the selected menu option.
+ */
+function get_selected_menu_option_value(select_menu_identifier) {
+	try {
+		let menu_object = {}, options_array = [], selected_option_index = 0, selected_option_object = {}, selected_option_value;
+		menu_object = document.getElementById(select_menu_identifier);
+		options_array = menu_object.options;
+		selected_option_index = menu_object.selectedIndex;
+		selected_option_object = options_array[selected_option_index];
+		selected_option_value = selected_option_object.value
+		return selected_option_value;
+	}
+	catch(e) {
+		console.log("An exception to normal functioning occurred during the runtime of get_selected_menu_option(select_menu_identifier): " + e);
+	}
+}
+
+/**
+ * Assume that this funciton is called whenever the web page file is opened or refreshed by the web browser.
+ * Display a time-stamped message which indicates the time at which the web page was opened as green text at the bottom of the page.
+ * Set the yellow span text which represents seconds elapsed to the value 0.
+ * Set the yellow span text which represents loops completed to the value 0.
+ * Populate the sound file menu with multiple sound file options.
+ * Set the yellow span text which represents loops completed to the one and only default selected value in the select menu.
+ * Set the button to be visible rather than hidden to the application end user.
+ * If a runtime error occurs, use the try-catch block to perform exception handling by displaying a relevant web console message.
+ */
+function load_web_page() {
+	try {
+		let message = "The web page was loaded by the web browser at time: " + generate_time_stamp();
+		document.getElementById("console").innerHTML = message;
+		document.getElementById("seconds_elapsed_display").innerHTML = "0";
+		document.getElementById("loops_completed_display").innerHTML = "0";
+		document.getElementById("sound_file_menu").innerHTML = get_menu_options();
+		document.getElementById("file_selected_display").innerHTML = get_selected_menu_option_value("sound_file_menu");
+		document.getElementById("the_button").style.display = "block";
+	}
+	catch(e) {
+		console.log("An exception to normal functioning occurred during the runtime of load_web_page(): " + e);
+	}
+}
+
+/**
+ * Assume that this funciton is called by the event of a single button click.
+ * Hide the button from the user interface after it is presumably clicked.
+ * Display a time-stamped message which indicates the time at which the button was clicked as green text at the bottom of the page.
+ * Set the yellow span text which represents seconds elapsed to the value 0.
+ * Set the yellow span text which represents loops completed to the value 0.
+ * Start playing the selected sound file for an indefinite number of times and incrementing the number of seconds elapsed and the number of audio loops played.
+ * If a runtime error occurs, use the try-catch block to perform exception handling by displaying a relevant web console message.
+ */
+function start_sound_bath() {
+	try {
+		let message = "The button was clicked at time: " + generate_time_stamp();
+		let elapsed_seconds_display = document.getElementById("seconds_elapsed_display");
+		let loops_completed_display = document.getElementById("loops_completed_display");
+		let file_selected_display = document.getElementById("file_selected_display");
+		let selected_file_name = get_selected_menu_option_value("sound_file_menu");
+		let button = document.getElementById("the_button");
+		let audio_file = undefined;
+		let loop_length = undefined;
+		let action = undefined;
+		let number_of_seconds = 0;
+		let number_of_loops = 0;
+		document.getElementById("console").innerHTML += (('&lt;' + 'p' + '&gt;') + message + ('&lt;' + '/' + '&gt;'));
+		button.style.display = "none";
+		elapsed_seconds_display.innerHTML = "0";
+		loops_completed_display.innerHTML = "0";
+		file_selected_display.innerHTML = selected_file_name;
+		audio_file = new Audio(selected_file_name);
+		loop_length = audio_file.duration;
+		// audio_file.loop = true;
+		audio_file.play(); 
+		action = setInterval( 
+			function() { // Call the anonymous function once per every 1000 milliseconds.
+				number_of_seconds = parseInt(elapsed_seconds_display.innerHTML);
+				number_of_loops = parseInt(loops_completed_display.innerHTML);
+				number_of_seconds += 1
+				if (audio_file.ended) { 
+					number_of_loops += 1;
+					audio_file.play();
+				}
+				elapsed_seconds_display.innerHTML = number_of_seconds;
+				loops_completed_display.innerHTML = number_of_loops;
+			}, 1000 // milliseconds per interval
+		);
+	}
+	catch(e) {
+		console.log("An exception to normal functioning occurred during the runtime of start_sound_bath(): " + e);
+	}
+}
+</pre>
+<hr>
+<p><strong>Hyper-Text-Markup-Language (HTML)</strong></p>
+<p>The HTML code constitutes the web page source code. (To avoid “collision detection” between this website’s source code and the source code for the Infinite Loop Sound web page application, the content of infinite_loop_sound.html is presented on this page as a screenshot image of the file as it appears on GitHub. Click on the file link to copy that code directly).</p>
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="4365" data-permalink="https://karlinaobject.wordpress.com/infinite_loop_sound_html_screenshot/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_html_screenshot.png" data-orig-size="924,790" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="infinite_loop_sound_html_screenshot" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_html_screenshot.png?w=300" data-large-file="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_html_screenshot.png?w=924" src="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_html_screenshot.png?w=924" alt="" class="wp-image-4365" srcset="https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_html_screenshot.png 924w, https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_html_screenshot.png?w=150 150w, https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_html_screenshot.png?w=300 300w, https://karlinaobject.files.wordpress.com/2021/01/infinite_loop_sound_html_screenshot.png?w=768 768w" sizes="(max-width: 924px) 100vw, 924px" /></figure>
+
+
+<hr>
+<p><strong>Cascading-Style-Sheet (CSS) </strong></p>
+<p>The CSS stylesheet code controls the appearance of web page elements using a particular set of specifications.</p>
+<pre>/**
+ * file: basic_stylesheet.css
+ * type: CascadingStyleSheet
+ * author: karbytes
+ * date: 17_JANUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+
+/** Make the page background black, the text orange and monospace, and the page content width 800 pixels or less. */
+body {
+ 	background: #000000;
+ 	color: #ff9000;
+ 	font-family: monospace;
+ 	font-size: 16px;
+ 	padding: 10px;
+ 	width: 800px;
+}
+
+/** Make input elements and select elements have an orange rounded border, a black background, and orange monospace text. */
+input, select {
+	background: #000000;
+	color: #ff9000;
+	border-color: #ff9000;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+	appearance: none;  
+ 	font-family: monospace;
+ 	font-size: 16px;
+}
+
+/** Invert the text color and background color of INPUT and SELECT elements when the cursor (i.e. mouse) hovers over them. */
+input:hover, select:hover {
+	background: #ff9000;
+	color: #000000;
+}
+
+/** Make elements whose class is "single_character_button" have an orange rounded border, a black background, orange monospace text, and a side length of 50 pixels for all four sides. */
+.single_character_button {
+	width: 50px;
+	height: 50px;
+	background: #000000;
+	color: #ff9000;
+ 	font-family: monospace;
+ 	font-size: 16px;
+ 	border-color: #00ffff;
+ 	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+/** Invert the text color and background color of elements whose class is "single_character_button" when the cursor (i.e. mouse) hovers over them. */
+.single_character_button:hover {
+	background: #ff9000;
+	color: #000000;
+}
+
+/** Set the text color of elements whose class is "data" to YELLOW. */
+.data {
+	color: #ffff00;
+}
+
+/** Set the text color of elements whose identifier (id) is "output" to CYAN. */
+#output {
+	color: #00ffff;
+}
+
+/** Set the text color of elements whose identifier (id) is "console" to GREEN. */
+#console {
+	color: #00ff00;
+}
+
+/** Make elements whose class is "bordered_container" have a MAGENTA border. */
+.bordered_container {
+	border-color: #ff00ff;
+	border-width: 1px;
+	border-style: solid;
+	padding: 10px;
+}
+</pre>
+<hr>
+<p>This page is current as of 14_FEBRUARY_2021 and is licensed as <a href="https://karlinaobject.wordpress.com/public_domain/" target="_blank">PUBLIC_DOMAIN</a>.</p>
+<hr>	
