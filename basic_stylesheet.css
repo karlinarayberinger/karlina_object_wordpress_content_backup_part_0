@@ -1,0 +1,81 @@
+/**
+ * file: basic_stylesheet.css
+ * type: CascadingStyleSheet
+ * author: karbytes
+ * date: 17_JANUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+
+/** Make the page background black, the text orange and monospace, and the page content width 800 pixels or less. */
+body {
+ 	background: #000000;
+ 	color: #ff9000;
+ 	font-family: monospace;
+ 	font-size: 16px;
+ 	padding: 10px;
+ 	width: 800px;
+}
+
+/** Make input elements and select elements have an orange rounded border, a black background, and orange monospace text. */
+input, select {
+	background: #000000;
+	color: #ff9000;
+	border-color: #ff9000;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+	appearance: none;  
+ 	font-family: monospace;
+ 	font-size: 16px;
+}
+
+/** Invert the text color and background color of INPUT and SELECT elements when the cursor (i.e. mouse) hovers over them. */
+input:hover, select:hover {
+	background: #ff9000;
+	color: #000000;
+}
+
+/** Make elements whose class is "single_character_button" have an orange rounded border, a black background, orange monospace text, and a side length of 50 pixels for all four sides. */
+.single_character_button {
+	width: 50px;
+	height: 50px;
+	background: #000000;
+	color: #ff9000;
+ 	font-family: monospace;
+ 	font-size: 16px;
+ 	border-color: #00ffff;
+ 	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+/** Invert the text color and background color of elements whose class is "single_character_button" when the cursor (i.e. mouse) hovers over them. */
+.single_character_button:hover {
+	background: #ff9000;
+	color: #000000;
+}
+
+/** Set the text color of elements whose class is "data" to YELLOW. */
+.data {
+	color: #ffff00;
+}
+
+/** Set the text color of elements whose identifier (id) is "output" to CYAN. */
+#output {
+	color: #00ffff;
+}
+
+/** Set the text color of elements whose identifier (id) is "console" to GREEN. */
+#console {
+	color: #00ff00;
+}
+
+/** Make elements whose class is "bordered_container" have a MAGENTA border. */
+.bordered_container {
+	border-color: #ff00ff;
+	border-width: 1px;
+	border-style: solid;
+	padding: 10px;
+}
