@@ -1,0 +1,173 @@
+<hr>
+<p>FIBONACCI_NUMBERS</p>
+<hr>
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="4051" data-permalink="https://karlinaobject.wordpress.com/fibonacci_numbers_user_interface_screenshot/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_user_interface_screenshot.png" data-orig-size="398,215" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="fibonacci_numbers_user_interface_screenshot" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_user_interface_screenshot.png?w=300" data-large-file="https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_user_interface_screenshot.png?w=398" src="https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_user_interface_screenshot.png?w=398" alt="" class="wp-image-4051" srcset="https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_user_interface_screenshot.png 398w, https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_user_interface_screenshot.png?w=150 150w, https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_user_interface_screenshot.png?w=300 300w" sizes="(max-width: 398px) 100vw, 398px" /></figure>
+
+
+<hr>
+<p>The single web page software application generates the first ten elements of the Fibonacci Sequence.</p>
+<p><strong>Code Files:</strong></p>
+<p><a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/fibonacci_numbers.js" target="_blank">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/fibonacci_numbers.js</a></p>
+<p><a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/fibonacci_numbers.html" target="_blank">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/fibonacci_numbers.html</a></p>
+<p><a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/karbytes_stylesheet.css" target="_blank">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_0/main/karbytes_stylesheet.css</a></p>
+<hr>
+<p><strong>JavaScript File</strong></p>
+<p>The JavaScript file, fibonacci_numbers.js, defines the arithmetic instructions which are used to generate terms of the Fibonacci Sequence using recursion.</p>
+<pre>/**
+ * file: fibonacci_numbers.js
+ * type: JavaScript
+ * author: karbytes
+ * date: 04_JANUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+
+function is_exactly_one_function_argument(X) {
+	try {
+		return (arguments.length === 1) ? true : false;
+	}
+	catch(e) {
+		console.log("An error occurred during the runtime of is_exactly_one_function_argument(X): " + e);
+	}
+}
+
+function is_exactly_one_number_type_value(X) {
+	try {
+		return (is_exactly_one_function_argument(X) &amp;&amp; ((typeof X) === "number")) ? true : false;
+	}
+	catch(e) {
+		console.log("An error occurred during the runtime of is_exactly_one_number_type_value(X): " + e);
+	}
+}
+
+function is_exactly_one_integer_value(X) {
+	try {
+		return (is_exactly_one_number_type_value(X) &amp;&amp; (Math.floor(X) === X)) ? true : false;
+	}
+	catch(e) {
+		console.log("An error occurred during the runtime of is_exactly_one_integer_value(X): " + e);
+	}
+}
+
+function is_exactly_one_nonnegative_integer_value(X) {
+	try {
+		return (is_exactly_one_integer_value(X) &amp;&amp; (X &gt; - 1)) ? true : false;
+	}
+	catch(e) {
+		console.log("An error occurred during the runtime of is_exactly_one_nonnegative_integer_value(X): " + e);
+	}
+}
+
+function get_fibonacci_number(N) {
+	try {
+		N = (is_exactly_one_nonnegative_integer_value(N)) ? N : 0;
+		if (N &lt; 2) return 1;
+		return (get_fibonacci_number(N - 2) + get_fibonacci_number(N - 1));
+	}
+	catch(e) {
+		console.log("An error occurred during the runtime of get_fibonacci_number(N): " + e);
+	}
+}
+
+function get_first_N_fibonacci_sequence_terms(N) {
+	try {
+		let i = 0, S = [];
+		while (i &lt; N) {
+			S.push(get_fibonacci_number(i));
+			i += 1;
+		}
+		return S;
+	}
+	catch(e) {
+		console.log("An error occurred during the runtime of get_first_N_fibonacci_sequence_terms(N): " + e);
+	}
+}
+
+function test() {
+	try {
+		document.getElementById("output").innerHTML = get_first_N_fibonacci_sequence_terms(10);
+	}
+	catch(e) {
+		console.log("An error occurred during the runtime of test(): " + e);
+	}
+}
+</pre>
+<hr>
+<p><strong>HyperTextMarkupLanguage</strong></p>
+<p>The web page file, fibonacci_numbers.html, features a single button which prints the first ten terms of the Fibonacci Sequence when clicked.</p>
+<p>Due to the fact that HTML tags for web page code examples and HTML for pages of this website tend to blend together in the WordPress editor, the HTML code is displayed as a screenshot image rather than as preformatted text enclosed inside of &#8220;pre&#8221; HTML tags. Visit the fibonacci_numbers.html file link to select and copy the HTML code from that file and to paste into a text editor to save as a functional web page application on a local machine.</p>
+<hr>
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="4041" data-permalink="https://karlinaobject.wordpress.com/fibonacci_numbers_html_screenshot/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_html_screenshot.png" data-orig-size="544,544" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="fibonacci_numbers_html_screenshot" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_html_screenshot.png?w=300" data-large-file="https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_html_screenshot.png?w=544" src="https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_html_screenshot.png?w=544" alt="" class="wp-image-4041" srcset="https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_html_screenshot.png 544w, https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_html_screenshot.png?w=150 150w, https://karlinaobject.files.wordpress.com/2021/01/fibonacci_numbers_html_screenshot.png?w=300 300w" sizes="(max-width: 544px) 100vw, 544px" /></figure>
+
+
+<hr>
+<p><strong>CascadingStyleSheet</strong></p>
+<p>The stylesheet file, karbytes_stylesheet.css, controls the appearance of web page elements. The text is orange and monospace against a black page background.</p>
+<pre>/**
+ * file: karbytes_stylesheet.css
+ * type: CascadingStyleSheet
+ * author: karbytes
+ * date: 04_JANUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+
+body {
+ 	background: #000000;
+ 	color: #ff9000;
+ 	font-family: monospace;
+ 	font-size: 16px;
+ 	padding: 10px;
+ 	width: 400px;
+}
+
+input, select {
+	background: #000000;
+	color: #ff9000;
+	border-color: #ff9000;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+	appearance: none;  
+ 	font-family: monospace;
+ 	font-size: 16px;
+}
+
+input:hover, select:hover {
+	background: #ff9000;
+	color: #000000;
+}
+
+.single_character_button {
+	width: 50px;
+	height: 50px;
+	background: #000000;
+	color: #ff9000;
+ 	font-family: monospace;
+ 	font-size: 16px;
+ 	border-color: #00ffff;
+ 	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.single_character_button:hover {
+	background: #ff9000;
+	color: #000000;
+}
+
+#output {
+	color: #00ffff;
+}
+
+#console {
+	color: #00ff00;
+}
+</pre>
+<hr>
+<p>This page is current as of 14_FEBRUARY_2021 and is licensed as <a href="https://karlinaobject.wordpress.com/public_domain/" target="_blank">PUBLIC_DOMAIN</a>.</p>
+<hr>	
