@@ -1,0 +1,36 @@
+<!--
+/**
+ * file: infinite_loop_sound.html
+ * type: HyperTextMarkupLanguage
+ * author: karbytes
+ * date: 18_JANUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>INFINITE_LOOP_SOUND</title>
+ 	<link rel="stylesheet" href="basic_stylesheet.css">
+ 	<script src="infinite_loop_sound.js"></script>
+ </head>
+ <body onload="load_web_page()">
+ 	<div class="bordered_container">
+ 		<h1>INFINITE_LOOP_SOUND</h1>
+ 		<p>Play a sound file for some indefinite number of cycles.</p>
+ 	</div>
+ 	<div class="bordered_container">
+ 		<p>1. Select a sound file from the list below.</p>
+ 		<p><select id="sound_file_menu"></select></p>
+ 		<p>2. Click the button to start playing the sound file.</p>
+ 		<p><input id="the_button" type="button" value="start_sound_bath()" onclick="start_sound_bath()"></p>
+ 	</div>
+ 	<div id="output" class="bordered_container">
+ 		<p>Seconds Elapsed:&nbsp;<span id="seconds_elapsed_display" class="data">???</span></p>
+ 		<p>Loops Completed:&nbsp;<span id="loops_completed_display" class="data">???</span></p>
+ 		<p>File Selected:&nbsp;<span id="file_selected_display" class="data">???</span></p>
+ 	</div>
+ 	<p id="console">???</p>
+ </body>
+ </html>
