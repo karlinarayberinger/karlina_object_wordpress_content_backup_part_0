@@ -1,0 +1,72 @@
+/**
+ * file: binary_to_decimal.css
+ * type: cascading-style-sheet
+ * author: karbytes
+ * date: 23_FEBRUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+
+body {
+ 	background: #000000;
+ 	color: #ff9000;
+ 	font-family: monospace;
+ 	font-size: 18px;
+ 	padding: 10px;
+ 	width: 1200px;
+}
+
+div {
+	border-color: #ff00ff;
+	border-width: 1px;
+	border-style: solid;
+	padding: 10px;
+}
+
+input, select {
+	background: #000000;
+	color: #ff9000;
+	border-color: #ff9000;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+	appearance: none;  
+ 	font-family: monospace;
+ 	font-size: 16px;
+}
+
+input:hover, select:hover {
+	background: #ff9000;
+	color: #000000;
+}
+
+.single_character_button {
+	width: 50px;
+	height: 50px;
+	background: #000000;
+	color: #00ffff;
+ 	font-family: monospace;
+ 	font-size: 16px;
+ 	border-color: #00ffff;
+ 	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.single_character_button:hover {
+	background: #00ffff;
+	color: #000000;
+}
+
+#insignificant_digits_display {
+	color: #ff9000;
+}
+
+#significant_digits_display {
+	color: #00ffff;
+}
+
+.results_display {
+	color: #00ff00;
+}

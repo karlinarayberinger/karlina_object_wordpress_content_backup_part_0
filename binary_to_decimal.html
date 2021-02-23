@@ -1,0 +1,48 @@
+<!--
+/**
+ * file: binary_to_decimal.html
+ * type: hyper-text-markup-language
+ * author: karbytes
+ * date: 23_FEBRUARY_2021
+ * license: PUBLIC_DOMAIN
+ */
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>BINARY_TO_DECIMAL</title>
+ 	<link rel="stylesheet" href="binary_to_decimal.css">
+ 	<script src="binary_to_decimal.js"></script>
+ </head>
+ <body onload="initialize_application()">
+ 	<div>
+ 		<h1>BINARY_TO_DECIMAL</h1>
+ 		<p>Convert a sequence of eight binary digits to its corresponding decimal integer value.</p>
+ 	</div>
+ 	<div>
+ 		<p>
+ 			binary_input:&nbsp;
+ 			<span id="insignificant_digits_display">???</span><span id="significant_digits_display"></span>.
+ 		</p>
+ 		<p>
+ 			decimal_output:&nbsp;
+ 			<span class="results_display" id="decimal_output_display">???</span>.
+ 		</p>
+ 	</div>
+ 	<div>
+ 		<p>Click the binary digit buttons below to enter up to eight significant digits as function input.</p>
+ 		<p>
+ 			<input type="button" class="single_character_button" value="0" onclick="enter_digit_zero()">&nbsp;
+ 			<input type="button" class="single_character_button" value="1" onclick="enter_digit_one()">
+ 		</p>
+ 	</div>
+ 	<div>
+ 		<p>Click the CONVERT button below to convert the binary input sequence to the decimal output integer.</p>
+ 		<p><input type="button" value="CONVERT" onclick="binary_to_decimal_convertion()"></p>
+ 	</div>
+ 	<div class="results_display" id="terminal_window">
+ 		<p>???</p>
+ 	</div>
+ </body>
+ </html>
